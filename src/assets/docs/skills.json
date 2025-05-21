@@ -1,0 +1,75 @@
+[
+  {
+    "name": "Python",
+    "icon": "python"
+  },
+  {
+    "name": "Java",
+    "icon": "java"
+  },
+  {
+    "name": "JavaScript",
+    "icon": "javascript"
+  },
+  {
+    "name": "HTML5",
+    "icon": "html"
+  },
+  {
+    "name": "CSS3",
+    "icon": "css"
+  },
+
+  {
+    "name": "Git & GitHub",
+    "icon": "git_github"
+  },
+  {
+    "name": "Docker",
+    "icon": "docker"
+  },
+  {
+    "name": "Kubernetes",
+    "icon": "kubernetes"
+  },
+  {
+    "name": "Spring Boot",
+    "icon": "spring_boot"
+  },
+  {
+    "name": "ReactJS",
+    "icon": "react"
+  },
+  {
+    "name": "NodeJS",
+    "icon": "node"
+  },
+  {
+    "name": "TensorFlow",
+    "icon": "tensorflow"
+  },
+  {
+    "name": "NumPy",
+    "icon": "numpy"
+  },
+  {
+    "name": "Pandas",
+    "icon": "pandas"
+  },
+  {
+    "name": "MySQL",
+    "icon": "mysql"
+  },
+  {
+    "name": "MongoDB",
+    "icon": "mongodb"
+  },
+  {
+    "name": "Figma",
+    "icon": "figma"
+  },
+  {
+    "name": "Photoshop",
+    "icon": "photoshop"
+  }
+]

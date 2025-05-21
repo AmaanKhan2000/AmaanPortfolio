@@ -1,0 +1,23 @@
+[
+  {
+    "company": "SRM Institute of Science and Technology",
+    "role": "Bachelor's in Computer Science and Engineering",
+    "education": true,
+    "duration": "July 2018 - June 2022",
+    "courses": "Object Oriented Programming, Data Structures and Algorithms, Database Management Systems, Operating Systems, and Advanced Calculus and Complex Analysis."
+  },
+  {
+    "company": "Verizon",
+    "role": "Cybersecurity Engineer II",
+    "duration": "September 2020 - December 2024",
+    "techs": ["Python", "Java", "Spring Boot", "DevOps", "Agile"],
+    "work": "Gained extensive hands-on experience in cloud-native application development, microservices architecture, and DevOps practices. Successfully transitioned FedEx's monolithic systems to a scalable microservices architecture, increasing operational efficiency and system reliability. Implemented CI/CD pipelines and monitoring tools to automate deployments, enabling proactive identification and resolution of issues."
+  },
+  {
+    "company": "Arizona State University",
+    "role": "Master's in Computer Science",
+    "education": true,
+    "duration": "August 2024 - Present",
+    "courses": "Information Assurance Security, Statistical Machine Learning, Data Mining, Data Visualization, and Data Optimization"
+  }
+]

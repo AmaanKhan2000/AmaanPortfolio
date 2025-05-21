@@ -1,0 +1,282 @@
+[
+  {
+    "name": "Chat With Me",
+    "nav": "chat-with-me",
+    "what": "A real-time chat application supporting one-on-one and group conversations, designed with a focus on interactive features, user customization, and responsive layouts.",
+    "description": "A secure and dynamic mobile responsive web chat application utilizing websockets for real-time communication. Enjoy seamless user authentication through login and signup processes. Engage in one-to-one chats, manage contacts, create and delete groups, and have full control over group membership with the ability to add and kick members.",
+    "github": "https://github.com/DevelopedBy-Siva/chat-with-me/tree/master-client",
+    "deployed_url": "https://chat-with-me-nine.vercel.app",
+    "hint": "The project is deployed as a free instance, so you might experience initial slowness of 1-4 minutes as the database kicks in and occasional outages when running the app. Thank you for your patience!",
+    "nutshell": ["Web App", "Full-Stack"],
+    "techs": [
+      "ReactJS",
+      "Styled Components",
+      "Redux",
+      "NodeJS",
+      "Socket.io",
+      "MongoDB"
+    ],
+    "images": [],
+    "display": [
+      {
+        "screen": "monitor",
+        "source": ["/projectPedia/chatwithme/intro.mp4"]
+      },
+      {
+        "heading": "Configure Account",
+        "description": "The application provides users with the ability to personalize their experience by changing their profile picture, name, and status. Additionally, users can seamlessly switch between dark and light themes based on their preference. The app offers convenient features such as password change and permanent account deletion for enhanced user control and customization.",
+        "screen": "tablet",
+        "source": ["/projectPedia/chatwithme/settings.mp4"]
+      },
+      {
+        "heading": "Add, Block & Delete Contact",
+        "description": "This app lets you add and name contacts as you like. Block someone to stop chatting, and delete contacts when needed.",
+        "screen": "laptop",
+        "source": ["/projectPedia/chatwithme/contact.mp4"]
+      },
+      {
+        "heading": "Create, Leave & Delete Group",
+        "description": "The application supports group functionality, allowing users to create groups, add members, and exit groups. Admins have additional capabilities, including the ability to remove members and delete the group entirely.",
+        "screen": "monitor",
+        "source": ["/projectPedia/chatwithme/groups.mp4"]
+      },
+      {
+        "heading": "Password Recovery with Email Verification",
+        "description": "When a password is forgotten, users can initiate a password update at any time. Upon request, a verification code is promptly sent to the user's email, valid for a strict 5-minute window. After this period, the verification code is automatically deleted from the database, ensuring security.",
+        "screen": "laptop",
+        "source": ["/projectPedia/chatwithme/forgot_pswd.mp4"]
+      }
+    ]
+  },
+  {
+    "name": "Shopit.now",
+    "nav": "shop-it-now",
+    "what": "A feature-rich e-commerce platform with an AI-powered custom chatbot for enhanced customer engagement and a seamless shopping experience.",
+    "description": "A secure and fully authenticated mobile-responsive web e-commerce application with a PyTorch-trained chatbot for interactive customer engagement. Enjoy a seamless shopping experience with features like add to cart, save for later, and wishlists. Stay informed with order tracking, while administrators manage products, advertisements, and shipments for a streamlined and efficient online shopping platform.",
+    "nutshell": ["Web App", "Full-Stack", "Machine Learning"],
+    "techs": [
+      "Python",
+      "PyTorch",
+      "NLTK",
+      "Flask",
+      "ReactJS",
+      "Redux",
+      "Spring Boot",
+      "PostgreSQL",
+      "Docker"
+    ],
+    "github": "https://github.com/DevelopedBy-Siva/Shopit.now",
+    "deployed_url": "https://shopit-now-client.vercel.app",
+    "hint": "The project is deployed as a free instance, so you might experience initial slowness of 1-4 minutes as the database kicks in and occasional outages when running the app. Thank you for your patience!",
+    "images": [],
+    "display": [
+      {
+        "screen": "monitor",
+        "source": ["/projectPedia/shopitnow/intro.mp4"]
+      },
+      {
+        "source": [
+          "/projectPedia/shopitnow/img/1.webp",
+          "/projectPedia/shopitnow/img/2.webp"
+        ],
+        "screen": "mobile",
+        "wrap": true
+      },
+      {
+        "heading": "Chatbot",
+        "description": "This chatbot is designed for an e-commerce app, aiming to enhance user engagement and support. It employs a feedforward neural network, powered by PyTorch, to understand user intentions from their messages. Trained on a dataset crafted for typical e-commerce interactions, the model becomes adept at recognizing patterns in user queries. Seamlessly integrated into the app, the chatbot dynamically generates responses based on predicted intentions, offering a user-friendly experience. Whether users are looking for tracking orders, exploring deals, etc..., this chatbot adds value to the e-commerce app, providing personalized assistance and making the customer experience more interactive and enjoyable.",
+        "screen": "laptop",
+        "source": ["/projectPedia/shopitnow/chatbot.mp4"]
+      },
+      {
+        "heading": "User Account",
+        "description": "The application offers a range of user-friendly functionalities, including tracking orders, canceling them, managing and modifying delivery addresses, updating passwords, and deleting the account.",
+        "screen": "tablet",
+        "source": ["/projectPedia/shopitnow/account.mp4"]
+      },
+      {
+        "heading": "Wishlist, Save Later, Place Order, & Cancel Order",
+        "description": "We can wishlist items and come back to them later, save them for later during checkout, place orders, and track products efficiently.",
+        "screen": "laptop",
+        "source": ["/projectPedia/shopitnow/order.mp4"]
+      },
+      {
+        "heading": "Admin Dashboard",
+        "description": "The dashboard is exclusively accessible to application admins. It allows control over the entire order process, from dispatch to shipping. Admins can add new products, advertise items through the home screen carousel, edit stock and other product details, and manage the trending product list. Additionally, admins can view user data, order and product counts, and the total revenue generated.",
+        "screen": "monitor",
+        "source": ["/projectPedia/shopitnow/admin.mp4"]
+      }
+    ]
+  },
+  {
+    "name": "Lane Pilot",
+    "nav": "lane-pilot",
+    "what": "A computer vision-based system for real-time lane detection and tracking on roadways.",
+    "description": "A Python application using OpenCV for efficient identification and tracking of lanes on roadways, employing Canny Edge detection for accurate lane detection.",
+    "nutshell": ["Desktop", "Computer Vision"],
+    "techs": ["Python", "OpenCV", "NumPy"],
+    "github": "https://github.com/DevelopedBy-Siva/lane-pilot",
+    "images": [],
+    "display": [
+      {
+        "source": ["/projectPedia/lane_pilot/video.mp4"]
+      },
+      {
+        "heading": "Grayscale Conversion and Noise Reduction",
+        "source": ["/projectPedia/lane_pilot/img/gray.webp"],
+        "description": "The initial step involves converting the colored frame to grayscale. Color images, comprising three channels (red, green, and blue), result in a combination of these values. In contrast, grayscale images possess a single channel with intensity values ranging from 0 to 255. Processing a single-channel image is faster than a three-channel color image due to its simplicity. Following this, noise reduction becomes imperative. Minimizing false noise in the image is vital for precise edge detection, achieved by applying a Gaussian filter before detecting edges.",
+        "screen": "image"
+      },
+      {
+        "heading": "Canny Edge Detection",
+        "source": ["/projectPedia/lane_pilot/img/canny.webp"],
+        "description": "Detecting edges in an image involves singling out the lane lines. This process identifies boundaries by looking for sharp changes in intensity or color. Before we dive in, it's essential to understand that an image is essentially a matrix of pixels. Each pixel represents light intensity, ranging from 0 (black) to 255 (white). A strong gradient indicates a sharp change, helping us identify edges, defined by differences in intensity between adjacent pixels.",
+        "screen": "image"
+      },
+      {
+        "heading": "Region of Interest Masking",
+        "source": ["/projectPedia/lane_pilot/img/region.webp"],
+        "description": "A region of interest mask is applied to the Canny edge-detected image. This masks out areas outside the region of interest, focusing only on the relevant portion of the image where lane markings are expected. The region of interest is defined by specifying vertices that form a polygonal shape covering the area of interest (typically the road section where lane markings are expected). This helps in ignoring irrelevant edges outside this region.",
+        "screen": "image"
+      },
+      {
+        "heading": "Hough Line Detection",
+        "source": ["/projectPedia/lane_pilot/img/hough.webp"],
+        "description": "The masked Canny image undergoes the Hough Transform to detect straight lines within the image. Parameters like minLineLength and maxLineGap are set to filter lines meeting specific criteria. These detected lines are then grouped based on their slope polarity to differentiate between left and right lane markings. Averaging the slopes and intercepts of these lines separately generates coordinates representing the left and right lane lines. These coordinates are drawn onto a black canvas, ultimately superimposed onto the original frame to visualize the detected lanes in the video.",
+        "screen": "image"
+      }
+    ]
+  },
+  {
+    "name": "Emo Gauge",
+    "nav": "emo-gauge",
+    "what": "A machine learning-powered sentiment analysis tool that assesses YouTube comment sentiments for a chosen video.",
+    "description": "This project involves developing a sentiment analysis model using a Long Short-Term Memory (LSTM) neural network to classify YouTube comments as positive, negative, or neutral. The model is integrated into a Streamlit-based web application that takes a YouTube video URL as input, extracts comments, and predicts the emotional dynamics surrounding the provided YouTube video.",
+    "hint": "The project is deployed as a free instance, so you might experience initial slowness or occasional outages when running the app. Thank you for your patience!",
+    "github": "https://github.com/DevelopedBy-Siva/emo-gauge",
+    "nutshell": ["Web App", "Machine Learning"],
+    "deployed_url": "https://developedby-siva-yt-sentiment-analyzer-main-u1qrfb.streamlit.app",
+    "techs": ["Python", "TensorFlow", "Keras", "NLTK", "Streamlit", "Plotly"],
+    "images": [],
+    "display": [
+      {
+        "screen": "tablet",
+        "source": ["/projectPedia/emo_gauge/play.mp4"]
+      },
+      {
+        "heading": "Data Collection and Data Preprocessing",
+        "source": ["/projectPedia/emo_gauge/img/dataset.webp"],
+        "description": "The <a href='https://www.kaggle.com/datasets/kazanova/sentiment140' target='_blank'>dataset</a> consists of over 1.5 million labeled entries from Twitter, annotated as positive, negative, or neutral. For the web application, YouTube API was used to fetch comments based on the provided video URL. Data preprocessing involved cleaning the text by removing URLs, mentions, hashtags, and special characters, converting to lowercase, and removing stop words using NLTK's stop words list. The sentiment values were mapped to string labels, and tokenization and padding were applied to ensure uniform input length for the LSTM model.",
+        "screen": "image",
+        "img_desc": "Sample preprocessed dataset with sentiment labels: Positive (1), Negative (-1), & Neutral (0)",
+        "style": {
+          "max-width": "480px",
+          "margin-top": "40px",
+          "margin-bottom": "40px"
+        }
+      },
+      {
+        "heading": "Model Development",
+        "source": ["/projectPedia/emo_gauge/img/result.webp"],
+        "description": "The model architecture is based on LSTM neural networks, designed for multi-class sentiment classification. I used <i>categorical_crossentropy</i> as the loss function and <i>Adam</i> as the optimizer. The model classifies comments into three categories: positive, negative, and neutral. Performance was optimized by tuning hyperparameters such as batch sizes and epochs.",
+        "screen": "image",
+        "img_desc": "Sample prediction result of comment sentiment counts over time",
+        "style": {
+          "margin-top": "40px"
+        }
+      },
+      {
+        "heading": "Web Application Development and Deployment",
+        "source": ["/projectPedia/emo_gauge/img/dashboard.webp"],
+        "description": "The user-friendly interface was developed using Streamlit, enabling users to input YouTube video URLs and display sentiment analysis results. The backend integrates with the YouTube API to fetch comments, preprocess them, and use the trained LSTM model for sentiment prediction. The model is loaded in the Streamlit app for real-time predictions. The web application was deployed as a free instance on Streamlit, providing real-time sentiment analysis of YouTube comments.",
+        "screen": "image",
+        "img_desc": "Live streamlit web application interface for real-time sentiment analysis",
+        "style": {
+          "margin-top": "40px"
+        }
+      }
+    ]
+  },
+  {
+    "name": "Word Wiz",
+    "nav": "word-wiz",
+    "what": "An interactive vocabulary flashcard tool for language skill-building, with quizzes and progress tracking.",
+    "description": "An interactive web page featuring words flashcards that allows users to save new words, engage in quizzes, and conveniently track their quiz history. It's an educational tool that enhances language learning and provides a seamless learning experience.",
+    "nutshell": ["Web App"],
+    "techs": ["ReactJS", "Styled Components", "Redux", "IndexedDB", "Firebase"],
+    "github": "https://github.com/DevelopedBy-Siva/word-wiz",
+    "deployed_url": "https://wordwiz-pink.vercel.app",
+    "images": [
+      {
+        "title": "Home",
+        "src": "/projectPedia/word_wiz/img/1.webp",
+        "description": "A secure and dynamic mobile responsive web chat application utilizing websockets for real-time communication. Enjoy seamless user authentication through login and signup processes. Engage in one-to-one chats, manage contacts, create and delete groups, and have full control over group membership with the ability to add and kick members."
+      }
+    ],
+    "display": [
+      {
+        "screen": "monitor",
+        "source": ["/projectPedia/word_wiz/intro.mp4"]
+      },
+      {
+        "source": [
+          "/projectPedia/word_wiz/img/home_1.webp",
+          "/projectPedia/word_wiz/img/home_2.webp"
+        ],
+        "screen": "mobile",
+        "wrap": true
+      },
+      {
+        "heading": "Add a New Word",
+        "description": "When adding a new word, it is stored in the browser's database. Clearing browser data will remove all words from your local storage. The webpage includes a functionality that enables you to create a backup file containing all the words from the local storage. This feature ensures that you can safely export data to different browsers and alleviate concerns about data loss.",
+        "screen": "laptop",
+        "source": ["/projectPedia/word_wiz/backup.mp4"]
+      },
+      {
+        "heading": "Play Quiz",
+        "description": "Learn new words, engage in quizzes to aid in retention, and take advantage of the website's quiz history tracker. This feature permits you to revisit past quiz results, enabling you to identify and review the words you answered incorrectly, ultimately allowing you to revise and improve your understanding.",
+        "screen": "tablet",
+        "source": ["/projectPedia/word_wiz/quiz.mp4"]
+      },
+      {
+        "source": [
+          "/projectPedia/word_wiz/img/quiz.webp",
+          "/projectPedia/word_wiz/img/history.webp"
+        ],
+        "screen": "mobile",
+        "wrap": true
+      }
+    ]
+  },
+  {
+    "name": "Cobra Quest",
+    "nav": "cobra-quest",
+    "what": "A mobile-responsive snake game inspired by classic arcade gameplay.",
+    "description": "A simple fruit snake mobile-responsive web game, designed to evoke the nostalgia of the classic arcade era.",
+    "nutshell": ["Web App"],
+    "techs": ["HTML", "CSS", "Javascript"],
+    "images": [],
+    "type": "game",
+    "github": "https://github.com/DevelopedBy-Siva/cobra-quest",
+    "deployed_url": "https://developedby-siva.github.io/cobra-quest/",
+    "display": [
+      {
+        "screen": "tablet",
+        "source": ["/projectPedia/cobra_quest/video.mp4"]
+      },
+      {
+        "source": [
+          "/projectPedia/cobra_quest/img/1.webp",
+          "/projectPedia/cobra_quest/img/2.webp"
+        ],
+        "screen": "mobile",
+        "wrap": true
+      }
+    ]
+  },
+  {
+    "name": "My Portfolio",
+    "what": "This is my personal portfolio web app—the very one you're viewing right now—featuring my projects, skills, and journey.",
+    "nutshell": ["Web App"]
+  }
+]
