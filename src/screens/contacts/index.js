@@ -18,7 +18,7 @@ export default function index() {
           <motion.a
             whileHover={{ scale: 1.1 }}
             transition={{ type: "spring", stiffness: 400, damping: 8 }}
-            href="mailto:its.sivasanker@gmail.com"
+            href="mailto:amaankhxn2000@gmail.com"
           >
             Say Hello
           </motion.a>
