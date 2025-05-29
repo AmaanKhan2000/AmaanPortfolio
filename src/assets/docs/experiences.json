@@ -7,15 +7,35 @@
     "courses": "Object Oriented Programming, Data Structures and Algorithms, Database Management Systems, Operating Systems, and Advanced Calculus and Complex Analysis."
   },
   {
+    "company": "Banao Technologies",
+    "role": "Full Stack Developer Intern",
+    "duration": "June 2021 - September 2021",
+    "techs": ["Python", "Java", "Spring Boot", "DevOps", "Agile"],
+    "work": [" Created mobile applications based on React, integrating Facebook's best practices for interface design.", "Designed REST calls using React to streamline user interface performance.","Maintained high-level expertise in React state management strategies.","Developed user interfaces for deployment on Amazon Web Services (AWS) platforms.", "Worked on a large-scale E-commerce project, where designers are able to post their designs and share it with the whole world and users can bid/buy designs and can be shipped within India."]
+  },
+  {
+    "company": "Across The Globe (ATG)",
+    "role": "Software Developer Intern",
+    "duration": "March 2021 - September 2021",
+    "techs": ["Python", "Java", "Spring Boot", "DevOps", "Agile"],
+    "work": "Gained extensive hands-on experience in cloud-native application development, microservices architecture, and DevOps practices. Successfully transitioned FedEx's monolithic systems to a scalable microservices architecture, increasing operational efficiency and system reliability. Implemented CI/CD pipelines and monitoring tools to automate deployments, enabling proactive identification and resolution of issues."
+  },  {
+    "company": "The Sparks Foundation",
+    "role": "Web Developer Intern",
+    "duration": "Jan 2021 - Feb 2021",
+    "techs": ["Python", "Java", "Spring Boot", "DevOps", "Agile"],
+    "work": "Gained extensive hands-on experience in cloud-native application development, microservices architecture, and DevOps practices. Successfully transitioned FedEx's monolithic systems to a scalable microservices architecture, increasing operational efficiency and system reliability. Implemented CI/CD pipelines and monitoring tools to automate deployments, enabling proactive identification and resolution of issues."
+  },
+  {
     "company": "Verizon",
     "role": "Cybersecurity Engineer II",
-    "duration": "September 2020 - December 2024",
+    "duration": "July 2022 - August 2024",
     "techs": ["Python", "Java", "Spring Boot", "DevOps", "Agile"],
     "work": "Gained extensive hands-on experience in cloud-native application development, microservices architecture, and DevOps practices. Successfully transitioned FedEx's monolithic systems to a scalable microservices architecture, increasing operational efficiency and system reliability. Implemented CI/CD pipelines and monitoring tools to automate deployments, enabling proactive identification and resolution of issues."
   },
   {
     "company": "Arizona State University",
-    "role": "Master's in Computer Science",
+    "role": "Master's in Data Science & Analytics",
     "education": true,
     "duration": "August 2024 - Present",
     "courses": "Information Assurance Security, Statistical Machine Learning, Data Mining, Data Visualization, and Data Optimization"

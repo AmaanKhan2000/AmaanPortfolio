@@ -37,6 +37,10 @@ export default function Home() {
               amaan@workspace <span>~</span> <span>status</span>
             </p>
             <p>
+          
+
+              Currently advancing my expertise in AI/ML through a Master’s in Data Science & Analytics, I’ve authored research on AI-driven health diagnostics (published in SN Computer Science), combining cybersecurity rigor with predictive modeling. My goal is to build intelligent systems that preempt threats and enhance organizational resilience.
+
               Seeking opportunities in AI-driven software development/Cybersecurity roles
               where I can apply my skills and make an impact.
             </p>

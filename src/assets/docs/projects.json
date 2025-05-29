@@ -4,7 +4,7 @@
     "nav": "chat-with-me",
     "what": "A real-time chat application supporting one-on-one and group conversations, designed with a focus on interactive features, user customization, and responsive layouts.",
     "description": "A secure and dynamic mobile responsive web chat application utilizing websockets for real-time communication. Enjoy seamless user authentication through login and signup processes. Engage in one-to-one chats, manage contacts, create and delete groups, and have full control over group membership with the ability to add and kick members.",
-    "github": "https://github.com/DevelopedBy-Siva/chat-with-me/tree/master-client",
+    "github": "https://github.com/AmaanKhan2000",
     "deployed_url": "https://chat-with-me-nine.vercel.app",
     "hint": "The project is deployed as a free instance, so you might experience initial slowness of 1-4 minutes as the database kicks in and occasional outages when running the app. Thank you for your patience!",
     "nutshell": ["Web App", "Full-Stack"],
@@ -65,7 +65,7 @@
       "PostgreSQL",
       "Docker"
     ],
-    "github": "https://github.com/DevelopedBy-Siva/Shopit.now",
+    "github": "https://github.com/AmaanKhan2000",
     "deployed_url": "https://shopit-now-client.vercel.app",
     "hint": "The project is deployed as a free instance, so you might experience initial slowness of 1-4 minutes as the database kicks in and occasional outages when running the app. Thank you for your patience!",
     "images": [],
@@ -115,7 +115,7 @@
     "description": "A Python application using OpenCV for efficient identification and tracking of lanes on roadways, employing Canny Edge detection for accurate lane detection.",
     "nutshell": ["Desktop", "Computer Vision"],
     "techs": ["Python", "OpenCV", "NumPy"],
-    "github": "https://github.com/DevelopedBy-Siva/lane-pilot",
+    "github": "https://github.com/AmaanKhan2000",
     "images": [],
     "display": [
       {
@@ -153,7 +153,7 @@
     "what": "A machine learning-powered sentiment analysis tool that assesses YouTube comment sentiments for a chosen video.",
     "description": "This project involves developing a sentiment analysis model using a Long Short-Term Memory (LSTM) neural network to classify YouTube comments as positive, negative, or neutral. The model is integrated into a Streamlit-based web application that takes a YouTube video URL as input, extracts comments, and predicts the emotional dynamics surrounding the provided YouTube video.",
     "hint": "The project is deployed as a free instance, so you might experience initial slowness or occasional outages when running the app. Thank you for your patience!",
-    "github": "https://github.com/DevelopedBy-Siva/emo-gauge",
+    "github": "https://github.com/AmaanKhan2000",
     "nutshell": ["Web App", "Machine Learning"],
     "deployed_url": "https://developedby-siva-yt-sentiment-analyzer-main-u1qrfb.streamlit.app",
     "techs": ["Python", "TensorFlow", "Keras", "NLTK", "Streamlit", "Plotly"],
@@ -204,7 +204,7 @@
     "description": "An interactive web page featuring words flashcards that allows users to save new words, engage in quizzes, and conveniently track their quiz history. It's an educational tool that enhances language learning and provides a seamless learning experience.",
     "nutshell": ["Web App"],
     "techs": ["ReactJS", "Styled Components", "Redux", "IndexedDB", "Firebase"],
-    "github": "https://github.com/DevelopedBy-Siva/word-wiz",
+    "github": "https://github.com/AmaanKhan2000",
     "deployed_url": "https://wordwiz-pink.vercel.app",
     "images": [
       {
@@ -257,7 +257,7 @@
     "techs": ["HTML", "CSS", "Javascript"],
     "images": [],
     "type": "game",
-    "github": "https://github.com/DevelopedBy-Siva/cobra-quest",
+    "github": "https://github.com/AmaanKhan2000",
     "deployed_url": "https://developedby-siva.github.io/cobra-quest/",
     "display": [
       {
