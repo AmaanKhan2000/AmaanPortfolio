@@ -9,7 +9,7 @@ export default function Footer() {
       <div className="profiles">
         <Profile />
       </div>
-      <span>&#169; 2025 Mohammed Amaan Ahmed Khan. All rights reserved.</span>
+      <span>&#169; 2026 Mohammed Amaan Ahmed Khan. All rights reserved.</span>
     </Container>
   );
 }
