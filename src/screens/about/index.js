@@ -70,8 +70,12 @@ export default function About() {
             exciting world of AI and ML. And honestly? I wouldn't have it any other way.
             <br />
             <br />
-            My mindset? 
-            <RotatingText texts={["Stay curious.", "Build relentlessly.", "Fail better.", "Keep learning.","The day I give up is the only day it's over"]} pause={2000} />
+            <span className="mindset">
+            My mindset?{" "}
+            <span className="rotating">
+              <RotatingText texts={["Stay curious.", "Build relentlessly.", "Fail better.", "Keep learning.", "It's never over until I give up"]} pause={2000} />
+            </span>
+          </span>
 
           </p>
 
@@ -126,6 +130,12 @@ const Container = styled.div`
     p {
       font-size: 14px;
     }
+      // .mindset{
+      // margin-left:5px;
+      // }
+      // .rotating{
+      // display:block;
+      // }
   }
 `;
 
