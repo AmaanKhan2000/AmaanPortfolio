@@ -71,7 +71,7 @@ export default function About() {
             <br />
             <br />
             My mindset? 
-            <RotatingText texts={["Stay curious.", "Build relentlessly.", "Fail better.", "Keep learning."]} pause={2000} />
+            <RotatingText texts={["Stay curious.", "Build relentlessly.", "Fail better.", "Keep learning.","The day I give up is the only day it's over"]} pause={2000} />
 
           </p>
 
