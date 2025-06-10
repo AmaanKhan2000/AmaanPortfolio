@@ -36,11 +36,15 @@ const Container = styled.div`
   width: 100%;
   min-height: 100vh;
   padding: 10px 100px;
-  background-color: #fff;
-  background-image: radial-gradient(#eaeaf1 8%, transparent 8%),
-    radial-gradient(#eaeaf1 8%, transparent 8%);
-  background-position: center;
-  background-size: 27px 27px;
+
+  background-color: #ffffff;
+  background-image:
+    radial-gradient(circle, rgba(201, 201, 211, 0.3) 8%, transparent 9%),
+    radial-gradient(circle, rgba(176, 176, 192, 0.3) 8%, transparent 9%),
+    linear-gradient(to bottom right, #f0f4ff, #ffffff);
+
+  background-size: 27px 27px, 27px 27px, cover;
+  background-position: 0 0, 13.5px 13.5px, center;
 
   .show-navbar {
     bottom: 38px;
@@ -52,6 +56,7 @@ const Container = styled.div`
     padding: 10px 20px;
   }
 `;
+
 
 const Wrapper = styled.div`
   margin: auto;

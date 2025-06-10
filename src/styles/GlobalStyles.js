@@ -14,10 +14,9 @@ const GlobalStyles = createGlobalStyle`
       width: 100%;
       height: 100%;
       overflow-x: hidden;
-      background-color: #fff;
       font-family: serif;
       scroll-behavior: smooth;
-   }
+
 
    ::-webkit-scrollbar {
       width: 5px;
