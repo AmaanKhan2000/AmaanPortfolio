@@ -3,7 +3,6 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@react-three/fiber": "^9.1.2",
     "framer-motion": "^10.18.0",
     "gsap": "^3.13.0",
     "html-react-parser": "^5.1.10",
