@@ -13,7 +13,7 @@ const navItems = [
   { placeholder: "Home", icon: <GoHome />, path: "/#home" },
   { placeholder: "About", icon: <GoPerson />, path: "/#about" },
   {
-    placeholder: "Projects",
+    placeholder: "Projects/Research",
     icon: <PiProjectorScreenChart />,
     path: "/#projects",
   },

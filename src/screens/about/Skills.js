@@ -1,6 +1,5 @@
 import React from "react";
 import { styled } from "styled-components";
-import { FaJava, FaGithubAlt, FaNodeJs } from "react-icons/fa";
 import {
   SiKubernetes,
   SiSpringboot,
@@ -16,30 +15,62 @@ import {
   SiDocker,
   SiFigma,
   SiAdobephotoshop,
+  SiTypescript,
+  SiFastapi,
+  SiFlask,
+  SiScikitlearn,
+  SiPostgresql,
+  SiGooglecloud,
+  SiJira,
+  SiOpenai,
+  SiJson,
+  SiC,
+  SiCplusplus,
+  SiExpress
 } from "react-icons/si";
-import { GrMysql } from "react-icons/gr";
 
-import skills from "../../assets/docs/skills";
+import {
+  FaJava,
+  FaGithubAlt,
+  FaNodeJs,
+  FaGitAlt
+} from "react-icons/fa";
+import skills from "../../assets/docs/skills.json"
+import { GrMysql } from "react-icons/gr";
 
 const skill_icon = {
   python: <SiPython />,
   java: <FaJava />,
+  c: <SiC />,
+  cpp: <SiCplusplus />,
   javascript: <SiJavascript />,
+  typescript: <SiTypescript />,
   html: <SiHtml5 />,
   css: <SiCss3 />,
+  sql: <GrMysql />,
+  json: <SiJson />,
   git_github: <FaGithubAlt />,
+  git: <FaGitAlt />,
   docker: <SiDocker />,
   kubernetes: <SiKubernetes />,
-  spring_boot: <SiSpringboot />,
   react: <SiReact />,
   node: <FaNodeJs />,
+  express: <SiExpress />,
+  flask: <SiFlask />,
+  fastapi: <SiFastapi />,
+  spring_boot: <SiSpringboot />,
   tensorflow: <SiTensorflow />,
+  scikit: <SiScikitlearn />,
   numpy: <SiNumpy />,
   pandas: <SiPandas />,
   mysql: <GrMysql />,
+  postgresql: <SiPostgresql />,
   mongodb: <SiMongodb />,
+  gcp: <SiGooglecloud />,
+  openai: <SiOpenai />,
+  jira: <SiJira />,
   figma: <SiFigma />,
-  photoshop: <SiAdobephotoshop />,
+  photoshop: <SiAdobephotoshop />
 };
 
 export default function MySkills() {
@@ -72,29 +103,35 @@ const SkillsContainer = styled.div`
     font-family: "Poppins", sans-serif;
     height: auto;
 
-    li {
-      background: #fff;
-      border: 1px solid #1c1d20;
-      padding: 18px 24px;
-      min-width: 140px;
-      border-radius: 15px;
-      display: flex;
-      align-items: center;
-      gap: 10px;
+li {
+  background: #fff;
+  border: 1px solid #1c1d20;
+  padding: 18px 24px;
+  min-width: 140px;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: transform 0.2s ease-in-out;
 
-      svg {
-        flex-shrink: 0;
-        font-size: 24px;
-        color: #1c1d20;
-      }
+  &:hover {
+    transform: scale(1.2);
+  }
 
-      span {
-        flex-shrink: 0;
-        font-size: 14px;
-        user-select: none;
-        color: #1c1d20;
-      }
-    }
+  svg {
+    flex-shrink: 0;
+    font-size: 24px;
+    color: #1c1d20;
+  }
+
+  span {
+    flex-shrink: 0;
+    font-size: 14px;
+    user-select: none;
+    color: #1c1d20;
+  }
+}
+
   }
 
   @media (max-width: 768px) {

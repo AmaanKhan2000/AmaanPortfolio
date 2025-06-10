@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import { styled } from "styled-components";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence, useInView } from "framer-motion";
 import { FiMinimize2, FiMaximize2 } from "react-icons/fi";
 import { IoSchoolSharp } from "react-icons/io5";
 import { MdWork } from "react-icons/md";
@@ -9,18 +9,28 @@ import experiences from "../../assets/docs/experiences.json";
 import { showCursor, hideCursor, expandCursor } from "../../utility/mouse";
 
 export default function Experiences() {
+  const containerRef = useRef(null);
+  const [visibleItems, setVisibleItems] = useState(new Set());
+
   return (
-    <Container>
-      <h3>Steps Along the Way</h3>
+    <Container ref={containerRef}>
+      <motion.h3
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6 }}
+      >
+        Steps Along the Way
+      </motion.h3>
       <div className="parent">
-        <Slider>
-          {new Array(6).fill("").map((_, index) => (
-            <span key={index} />
-          ))}
-        </Slider>
+        <AnimatedSlider visibleCount={visibleItems.size} />
         <div className="wrapper">
           {experiences.map((item, index) => (
-            <ExperienceBox item={item} key={index} />
+            <ExperienceBox 
+              item={item} 
+              key={index} 
+              index={index}
+              onVisible={() => setVisibleItems(prev => new Set([...prev, index]))}
+            />
           ))}
         </div>
       </div>
@@ -28,10 +38,46 @@ export default function Experiences() {
   );
 }
 
-function ExperienceBox({ item = {} }) {
+function AnimatedSlider({ visibleCount }) {
+  return (
+    <Slider>
+      {new Array(6).fill("").map((_, index) => (
+        <motion.span 
+          key={index}
+          initial={{ scaleY: 0, opacity: 0 }}
+          animate={{ 
+            scaleY: index === 0 ? Math.min(visibleCount / 6, 1) : 1,
+            opacity: index <= visibleCount ? 1 : 0.3
+          }}
+          transition={{ 
+            duration: 0.6,
+            delay: index * 0.1,
+            ease: "easeOut"
+          }}
+          style={{ transformOrigin: index === 0 ? "top" : "center" }}
+        />
+      ))}
+    </Slider>
+  );
+}
+
+function ExperienceBox({ item = {}, index, onVisible }) {
   const boxRef = useRef(null);
+  const isInView = useInView(boxRef, { 
+    threshold: 0.3,
+    triggerOnce: true,
+    margin: "-100px 0px"
+  });
 
   const [showMore, setShowMore] = useState(false);
+  const [hasBeenVisible, setHasBeenVisible] = useState(false);
+
+  useEffect(() => {
+    if (isInView && !hasBeenVisible) {
+      setHasBeenVisible(true);
+      onVisible();
+    }
+  }, [isInView, hasBeenVisible, onVisible]);
 
   useEffect(() => {
     if (!showMore) return;
@@ -49,31 +95,99 @@ function ExperienceBox({ item = {} }) {
     setShowMore(!showMore);
   }
 
+  const isEven = index % 2 === 0;
+
   return (
-    <BoxContainer>
+    <BoxContainer className={isEven ? "even" : "odd"}>
       <div className="box-cover">
-        <span className="indicator" />
+        <motion.span 
+          className="indicator"
+          initial={{ scale: 0, opacity: 0 }}
+          animate={isInView ? { scale: 1, opacity: 1 } : { scale: 0, opacity: 0 }}
+          transition={{ 
+            duration: 0.5,
+            delay: 0.3,
+            type: "spring",
+            stiffness: 200,
+            damping: 15
+          }}
+        />
         <motion.div
           className="box"
           ref={boxRef}
           onMouseMove={showCursor}
           onMouseLeave={hideCursor}
           onClick={handleBoxClick}
+          initial={{ 
+            opacity: 0,
+            x: isEven ? -100 : 100,
+            y: 50,
+            scale: 0.8
+          }}
+          animate={isInView ? { 
+            opacity: 1,
+            x: 0,
+            y: 0,
+            scale: 1
+          } : {
+            opacity: 0,
+            x: isEven ? -100 : 100,
+            y: 50,
+            scale: 0.8
+          }}
+          transition={{ 
+            duration: 0.8,
+            delay: index * 0.2,
+            type: "spring",
+            stiffness: 100,
+            damping: 15
+          }}
+          whileHover={{ 
+            scale: 1.02,
+            y: -5,
+            boxShadow: "rgba(0, 0, 0, 0.3) 0px 8px 16px"
+          }}
+          whileTap={{ scale: 0.98 }}
         >
           <BoxWrapper />
-          <span className="mini-max-ico">
+          <motion.span 
+            className="mini-max-ico"
+            whileHover={{ scale: 1.2 }}
+            transition={{ type: "spring", stiffness: 400, damping: 10 }}
+          >
             {showMore ? <FiMinimize2 /> : <FiMaximize2 />}
-          </span>
-          <div className="less-desc">
+          </motion.span>
+          <motion.div 
+            className="less-desc"
+            initial={{ opacity: 0 }}
+            animate={isInView ? { opacity: 1 } : { opacity: 0 }}
+            transition={{ duration: 0.6, delay: index * 0.2 + 0.4 }}
+          >
             <div className="where-how-long">
-              <span>
+              <motion.span
+                initial={{ opacity: 0, x: -20 }}
+                animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -20 }}
+                transition={{ duration: 0.5, delay: index * 0.2 + 0.5 }}
+              >
                 {item.education ? <IoSchoolSharp /> : <MdWork />}
                 {item.company}
-              </span>
-              <span>{item.duration}</span>
+              </motion.span>
+              <motion.span
+                initial={{ opacity: 0, x: 20 }}
+                animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: 20 }}
+                transition={{ duration: 0.5, delay: index * 0.2 + 0.6 }}
+              >
+                {item.duration}
+              </motion.span>
             </div>
-            <span>{item.role}</span>
-          </div>
+            <motion.span
+              initial={{ opacity: 0, y: 10 }}
+              animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 10 }}
+              transition={{ duration: 0.5, delay: index * 0.2 + 0.7 }}
+            >
+              {item.role}
+            </motion.span>
+          </motion.div>
           <AnimatePresence>
             {showMore && (
               <motion.div
@@ -81,21 +195,57 @@ function ExperienceBox({ item = {} }) {
                 initial={{ height: 0, opacity: 0 }}
                 animate={{ height: "auto", opacity: 1 }}
                 exit={{ height: 0, opacity: 0 }}
-                transition={{ type: "tween" }}
+                transition={{ 
+                  type: "spring",
+                  stiffness: 300,
+                  damping: 30,
+                  opacity: { duration: 0.2 }
+                }}
               >
                 {item.techs && (
-                  <ul className="techs">
-                    {item.techs.map((tech, index) => (
-                      <li key={index}>#{tech}</li>
+                  <motion.ul 
+                    className="techs"
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ delay: 0.2 }}
+                  >
+                    {item.techs.map((tech, techIndex) => (
+                      <motion.li 
+                        key={techIndex}
+                        initial={{ opacity: 0, scale: 0.8 }}
+                        animate={{ opacity: 1, scale: 1 }}
+                        transition={{ 
+                          delay: 0.3 + techIndex * 0.05,
+                          type: "spring",
+                          stiffness: 500,
+                          damping: 20
+                        }}
+                        whileHover={{ scale: 1.05 }}
+                      >
+                        #{tech}
+                      </motion.li>
                     ))}
-                  </ul>
+                  </motion.ul>
                 )}
-                {item.work && <p>{item.work}</p>}
+                {item.work && (
+                  <motion.p
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: 0.4, duration: 0.5 }}
+                  >
+                    {item.work}
+                  </motion.p>
+                )}
                 {item.courses && (
-                  <p className="courses">
+                  <motion.p 
+                    className="courses"
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: 0.5, duration: 0.5 }}
+                  >
                     <span>Relevant Courses:</span>
                     {item.courses}
-                  </p>
+                  </motion.p>
                 )}
               </motion.div>
             )}
@@ -177,6 +327,7 @@ const Slider = styled.div`
 
   span:first-of-type {
     flex: 1;
+    min-height: 50px;
   }
 
   span:nth-of-type(2) {
@@ -226,6 +377,7 @@ const BoxContainer = styled.div`
     cursor: pointer;
     position: relative;
     overflow: hidden;
+    transition: box-shadow 0.3s ease;
 
     .less-desc {
       padding: 20px 0;
@@ -276,6 +428,7 @@ const BoxContainer = styled.div`
       color: #474747;
       right: 10px;
       font-size: 13px;
+      cursor: pointer;
     }
 
     .work-done {
@@ -305,9 +458,11 @@ const BoxContainer = styled.div`
         color: white;
         background: #474747;
         flex-shrink: 0;
+        cursor: pointer;
+        transition: all 0.2s ease;
       }
 
-      . courses p {
+      .courses p {
         font-size: 12px;
         line-height: 1.8em;
       }
@@ -319,7 +474,7 @@ const BoxContainer = styled.div`
     }
   }
 
-  &:nth-child(odd) {
+  &.odd {
     justify-content: flex-end;
 
     .box {
@@ -331,7 +486,7 @@ const BoxContainer = styled.div`
     }
   }
 
-  &:nth-child(even) {
+  &.even {
     justify-content: flex-start;
 
     .box {

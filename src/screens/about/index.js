@@ -1,14 +1,38 @@
-import React from "react";
+'use client'; // At the very top of both files
 import { styled, keyframes } from "styled-components";
-import { FaChevronRight } from "react-icons/fa";
-
 import HomeHeading from "../../components/HomeHeading";
 import HomeContainerWrapper from "../../components/HomeContainerWrapper";
 import Experiences from "./Experiences";
 import MySkills from "./Skills";
+import { useEffect, useState } from "react";
+
+
+const RotatingText = ({ texts, pause = 2000 }) => {
+  const [index, setIndex] = useState(0);
+  const [fade, setFade] = useState(true);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setFade(false); // Start fade-out
+
+      setTimeout(() => {
+        setIndex((prev) => (prev + 1) % texts.length); // Switch text
+        setFade(true); // Start fade-in
+      }, 600); // Duration of fade-out
+    }, pause);
+
+    return () => clearInterval(interval);
+  }, [texts, pause]);
+
+  return <SmoothFade $fade={fade}>{texts[index]}</SmoothFade>;
+};
+
+  
+
 
 export default function About() {
   return (
+
     <Container id="about">
       <HomeContainerWrapper>
         <HomeHeading>What Makes Me Tick?</HomeHeading>
@@ -28,41 +52,50 @@ export default function About() {
             </div>
           </div>
           <p>
-            From a very young age, I was introduced to computers and was
-            instantly hooked. Whether it was trying to beat my high score on 3D
-            Pinball or pulling things apart to fix what I'd broken, computers
-            became a core part of my childhood before I even realized it.
+            I’ve always been fascinated by computers even before I knew what they were
+            truly capable of. I was just 7 when I first played Minesweeper on my family’s
+            old desktop. That moment sparked a lifelong curiosity a journey driven by the
+            desire to understand, break, fix and build things with code.
             <br />
             <br />
-            As I grew up, my curiosity only deepened. I was no longer just
-            excited to use technology—I wanted to understand how it worked
-            behind the scenes. That curiosity has shaped every step of my
-            journey since, pushing me to keep learning and do better with every
-            project. And even now, it feels like I've only scratched the
-            surface—there’s still a vast iceberg left to explore.
+            What began as playful exploration slowly turned into something deeper. As I
+            got older, the questions got tougher, and so did the problems. But with every
+            challenge came a stronger determination to solve it. From debugging stubborn
+            code to building end-to-end software solutions, the more complex it got, the
+            more hooked I became.
             <br />
             <br />
-            Today, I’m diving into the world of AI—a field I’m deeply passionate
-            about and excited to explore even further.
+            I've always considered myself a jack of all trades dabbling across domains
+            from software development to cybersecurity and now venturing into the
+            exciting world of AI and ML. And honestly? I wouldn't have it any other way.
             <br />
             <br />
-            My process?
-            <i>
-              <FaChevronRight />
-              Code, Break, & Learn.<b></b>
-            </i>
-            <br />
-            Every line of code takes me somewhere new, and that thrill of
-            discovery is what keeps me hooked.
-            <br />
+            My mindset? 
+            <RotatingText texts={["Stay curious.", "Build relentlessly.", "Fail better.", "Keep learning."]} pause={2000} />
+
           </p>
+
         </Intro>
         <Experiences />
         <MySkills />
       </HomeContainerWrapper>
     </Container>
+
+
   );
 }
+
+const SmoothFade = styled.span`
+  display: inline-block;
+  font-weight: 600;
+  color: #1c1d20;
+  font-family: "Poppins", sans-serif;
+  margin-left: 5px;
+  transition: opacity 0.6s ease-in-out, transform 0.6s ease-in-out;
+  opacity: ${({ $fade }) => ($fade ? 1 : 0)};
+  transform: ${({ $fade }) => ($fade ? "translateY(0px)" : "translateY(10px)")};
+`;
+
 
 const Container = styled.div`
   width: 100%;

@@ -1,75 +1,30 @@
 [
-  {
-    "name": "Python",
-    "icon": "python"
-  },
-  {
-    "name": "Java",
-    "icon": "java"
-  },
-  {
-    "name": "JavaScript",
-    "icon": "javascript"
-  },
-  {
-    "name": "HTML5",
-    "icon": "html"
-  },
-  {
-    "name": "CSS3",
-    "icon": "css"
-  },
-
-  {
-    "name": "Git & GitHub",
-    "icon": "git_github"
-  },
-  {
-    "name": "Docker",
-    "icon": "docker"
-  },
-  {
-    "name": "Kubernetes",
-    "icon": "kubernetes"
-  },
-  {
-    "name": "Spring Boot",
-    "icon": "spring_boot"
-  },
-  {
-    "name": "ReactJS",
-    "icon": "react"
-  },
-  {
-    "name": "NodeJS",
-    "icon": "node"
-  },
-  {
-    "name": "TensorFlow",
-    "icon": "tensorflow"
-  },
-  {
-    "name": "NumPy",
-    "icon": "numpy"
-  },
-  {
-    "name": "Pandas",
-    "icon": "pandas"
-  },
-  {
-    "name": "MySQL",
-    "icon": "mysql"
-  },
-  {
-    "name": "MongoDB",
-    "icon": "mongodb"
-  },
-  {
-    "name": "Figma",
-    "icon": "figma"
-  },
-  {
-    "name": "Photoshop",
-    "icon": "photoshop"
-  }
+  { "name": "Python", "icon": "python" },
+  { "name": "Java", "icon": "java" },
+  { "name": "C/C++", "icon": "cpp" },
+  { "name": "JavaScript", "icon": "javascript" },
+  { "name": "TypeScript", "icon": "typescript" },
+  { "name": "HTML5", "icon": "html" },
+  { "name": "CSS3", "icon": "css" },
+  { "name": "SQL", "icon": "sql" },
+  { "name": "Git & GitHub", "icon": "git_github" },
+  { "name": "Docker", "icon": "docker" },
+  { "name": "Kubernetes", "icon": "kubernetes" },
+  { "name": "ReactJS", "icon": "react" },
+  { "name": "NodeJS", "icon": "node" },
+  { "name": "ExpressJS", "icon": "express" },
+  { "name": "Flask", "icon": "flask" },
+  { "name": "FastAPI", "icon": "fastapi" },
+  { "name": "TensorFlow", "icon": "tensorflow" },
+  { "name": "scikit-learn", "icon": "scikit" },
+  { "name": "NumPy", "icon": "numpy" },
+  { "name": "Pandas", "icon": "pandas" },
+  { "name": "MongoDB", "icon": "mongodb" },
+  { "name": "MySQL", "icon": "mysql" },
+  { "name": "PostgreSQL", "icon": "postgresql" },
+  { "name": "Google Cloud Platform", "icon": "gcp" },
+  { "name": "OpenAI", "icon": "openai" },
+  { "name": "JIRA", "icon": "jira" },
+  { "name": "Figma", "icon": "figma" },
+  { "name": "Photoshop", "icon": "photoshop" }
 ]

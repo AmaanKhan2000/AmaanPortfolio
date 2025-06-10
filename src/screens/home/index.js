@@ -5,6 +5,10 @@ import { BiSolidChevronRight } from "react-icons/bi";
 
 import { HomeNavigation } from "../../components/Navbar";
 import emoji from "../../assets/images/emoji.png";
+import AnimatedContent from "../../utility/animated";
+import DecryptedText from "../../utility/decrypt";
+
+
 
 export default function Home() {
   const disableImage = (event) => event.preventDefault();
@@ -13,7 +17,20 @@ export default function Home() {
       <HomeNavigation />
       <div className="home-wrapper">
         <div className="details">
-          <h1>👋 Hello, I'm Mohammed Amaan Ahmed Khan!</h1>
+          <h1>👋
+              <div style={{ marginTop: '0rem', display:'inline', marginLeft:'2px' }}>
+              <DecryptedText
+                text="Hello, I'm Mohammed Amaan Ahmed Khan!"
+              speed={90}
+              sequential
+              className="revealed"
+              useOriginalCharsOnly
+              maxIterations={10}
+                animateOn="view"
+                revealDirection="start"
+              />
+              </div>
+             </h1>
           <Typewriter
             options={{
               strings: ["AI Enthusiast", "Ex-Cybersecurity Engineer @Verizon", "MERN stack Developer"],
@@ -22,7 +39,20 @@ export default function Home() {
             }}
           />
         </div>
+
         <div className="emoji">
+        <AnimatedContent
+          distance={150}
+          direction="horizontal"
+          reverse={false}
+          duration={2.6}
+          ease="elastic.out(1,0.3)"
+          initialOpacity={0}
+          animateOpacity
+          scale={0.5}
+          threshold={0.2}
+          delay={0.6}
+        >
           <div className="emoji-img">
             <img
               src={emoji}
@@ -31,10 +61,12 @@ export default function Home() {
               onDragStart={disableImage}
             />
           </div>
+        </AnimatedContent>
+
           <div className="my-status">
             <p>
               <BiSolidChevronRight />
-              amaan@workspace <span>~</span> <span>status</span>
+              amaan@workspace <span>~</span> <span>status</span> <span className="blink_me"></span>
             </p>
             <p>
           
@@ -57,6 +89,24 @@ const Container = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+
+
+  .blink_me {
+  animation: blinker 2.5s linear infinite;
+  width: 10px;
+  margin-left: 5px;
+  height: 10px;
+  display: inline-block;
+  border: 1px solid green;
+  background-color: green;
+  border-radius: 100%;
+}
+@keyframes blinker {
+  50% {
+    opacity: 0.3;
+  }
+}
+  
 
   .home-wrapper {
     display: flex;

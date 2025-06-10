@@ -4,9 +4,10 @@ import { Link } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import { IoIosArrowDown } from "react-icons/io";
 import { HiArrowRight } from "react-icons/hi2";
-
-import imgs from "./img.webp";
+import TiltedCard from "../../utility/titled-card";
 import projects from "../../assets/docs/projects.json";
+
+
 
 export default function Projects({ len = projects.length }) {
   const [collapse, setCollapse] = useState(null);
@@ -18,7 +19,6 @@ export default function Projects({ len = projects.length }) {
     }
     setCollapse(idx);
   };
-  const disableImage = (event) => event.preventDefault();
 
   return (
     <ProjectContainer>
@@ -47,12 +47,18 @@ export default function Projects({ len = projects.length }) {
               >
                 <div className="project-content">
                   <div className="photos">
-                    <img
-                      src={imgs}
-                      alt={`project-screen-${index}`}
-                      onContextMenu={disableImage}
-                      onDragStart={disableImage}
-                    />
+                  <TiltedCard
+                    imageSrc={process.env.PUBLIC_URL + `${item.img}`}
+                    containerHeight="200px"
+                    containerWidth="350px"
+                    imageHeight="200px"
+                    imageWidth="350px"
+                    rotateAmplitude={12}
+                    scaleOnHover={1.05}
+                    showMobileWarning={false}
+                    showTooltip={true}
+                    displayOverlayContent={true}
+                  />
                   </div>
                   <div className="project-details">
                     <ul>
@@ -62,8 +68,27 @@ export default function Projects({ len = projects.length }) {
                     </ul>
                     <p>{item.what}</p>
                   </div>
-                  {item.nav && (
-                    <Link className="nav" to={`/projects/${item.nav}`}>
+                  {( item.research ? 
+                  
+                <a
+                  href={process.env.PUBLIC_URL + item.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="nav"
+                >
+                  <motion.div
+                    whileHover={{ scale: 1.12 }}
+                    transition={{
+                      type: "spring",
+                      stiffness: 400,
+                      damping: 8
+                    }}
+                  >
+                    <HiArrowRight />
+                  </motion.div>
+                </a>
+                  :
+                    <Link className="nav" target="_blank" to={item.url}>
                       <motion.div
                         whileHover={{ scale: 1.12 }}
                         transition={{
@@ -114,21 +139,12 @@ const ProjectContainer = styled.div`
       align-items: center;
 
       .photos {
-        height: 145px;
+
         z-index: 2;
         flex-shrink: 0;
-        overflow: hidden;
-        border-radius: 10px;
 
-        img {
-          cursor: auto;
-          width: 250px;
-          opacity: 0.7;
-          transition: transform 0.3s ease-in;
-        }
-        img:hover {
-          transform: scale(1.04);
-        }
+
+
       }
 
       .project-details {
