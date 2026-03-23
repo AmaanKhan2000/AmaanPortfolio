@@ -46,23 +46,19 @@
     ]
   },
 
-  {
-    "company": "Verizon",
-    "role": "Security Engineer II",
-    "duration": "December 2023 - August 2024",
-    "techs": ["ForgeRock", "Java", "OAuth", "SAML", "DUO Security", "IAM", "MSSO", "CompTIA Security+"],
-    "work": [
-      "Integrated single sign-on solutions for 6300+ users with a single credential system.",
-      "Developed and enforced 1000+ access control policies using ForgeRock and SAML to protect critical systems.",
-      "Handled end-to-end identity lifecycle processes including onboarding/offboarding.",
-      "Collaborated across teams to translate business needs into IAM solutions, reducing risk by 22%.",
-      "Migrated 3000+ in-house applications to ForgeRock-managed access policies for compliance.",
-      "Implemented OAuth, MSSO, and Multi-Factor Authentication to strengthen user access security.",
-      "Executed a cybersecurity strategy that cut security incidents by 35%.",
-      "Led a 4-member team in securing a portal with DUO and fingerprint login.",
-      "Conducted CompTIA Security+ training sessions on IAM, SSDLC, and Risk Management for 50 employees."
-    ]
-  },
+{
+  "company": "Verizon",
+  "role": "Software Engineer II",
+  "duration": "July 2022 - August 2024",
+  "techs": ["Python", "Java", "REST APIs", "CI/CD", "Unix/Linux", "NLP", "LLM", "JavaScript", "Microservices", "Distributed Systems"],
+  "work": [
+    "Engineered a distributed multi-tenant Python and Java backend serving 6,300+ users with fault isolation across Unix/Linux environments, improving platform reliability by 30%.",
+    "Designed and built full-stack REST APIs with end-to-end CI/CD coverage across 3+ microservices, automating release regressions down by 20%.",
+    "Spearheaded a 3,000+ service migration end-to-end with phased rollout and automated validation gates, reducing incidents by 25% and MTTR by 20%.",
+    "Developed and shipped an NLP-based chatbot powered by LLM inference into production workflows, trimming support response time by 60%.",
+    "Built and maintained scalable JavaScript and Python web applications on Unix/Linux, improving order processing efficiency by 40%."
+  ]
+},
 
   {
     "company": "Arizona State University",

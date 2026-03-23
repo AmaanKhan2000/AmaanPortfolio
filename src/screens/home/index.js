@@ -33,7 +33,7 @@ export default function Home() {
              </h1>
           <Typewriter
             options={{
-              strings: ["AI Enthusiast", "Ex-Cybersecurity Engineer @Verizon", "MERN stack Developer"],
+              strings: ["AI Enthusiast", "Ex-Software Engineer - II @Verizon", "Full stack Developer"],
               autoStart: true,
               loop: true,
             }}
